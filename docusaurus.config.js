@@ -76,14 +76,6 @@ const config = {
               label: '英语',
               to: 'docs/english/',
             },
-            // {
-            //   label: '工具推荐',
-            //   to: 'docs/tools/',
-            // },
-            // {
-            //   label: '前端示例',
-            //   to: 'https://example.kuizuo.cn',
-            // },
           ],
         },
         {
@@ -95,9 +87,14 @@ const config = {
               to: 'docs/stm32/',
             },
             {
+              label: 'zynq',
+              to: 'docs/zynq/introduction',//记得要加入一个introduction入口
+            },
+            {
               label: 'ROS',
               to: 'docs/ros/',
-            },{
+            },
+            {
               label: 'Android',
               to: 'docs/Android/',
             },
@@ -110,67 +107,8 @@ const config = {
             //   label: 'API服务',
             //   to: 'https://api.kuizuo.cn',
             // },
-            // {
-            //   label: 'JS代码还原',
-            //   to: 'https://js-de-obfuscator.kuizuo.cn',
-            // },
-            // {
-            //   label: 'CyberChef加密',
-            //   to: 'https://cipher.kuizuo.cn',
-            // },
-            // {
-            //   label: 'Transform',
-            //   to: 'https://transform.kuizuo.cn',
-            // },
-            // {
-            //   label: '网盘',
-            //   to: 'https://pan.kuizuo.cn',
-            // },
-          ],
-        },
-        {
-          label: '一生一芯',
-          position: 'right',
-          to: 'docs/ysyx/',
-          // items: [
-          //   {
-          //     label: '预学习阶段',
-          //     to: 'docs/ysyx/pre/',
-          //   },
 
-          //   // {
-          //   //   label: 'ROS',
-          //   //   to: 'docs/ros/',
-          //   // },{
-          //   //   label: 'Android',
-          //   //   to: 'docs/Android/',
-          //   // },
-          //   // {
-          //   //   label: 'ESP32',
-          //   //   to: 'docs/esp32/',
-          //   // },
-            
-          //   // {
-          //   //   label: 'API服务',
-          //   //   to: 'https://api.kuizuo.cn',
-          //   // },
-          //   // {
-          //   //   label: 'JS代码还原',
-          //   //   to: 'https://js-de-obfuscator.kuizuo.cn',
-          //   // },
-          //   // {
-          //   //   label: 'CyberChef加密',
-          //   //   to: 'https://cipher.kuizuo.cn',
-          //   // },
-          //   // {
-          //   //   label: 'Transform',
-          //   //   to: 'https://transform.kuizuo.cn',
-          //   // },
-          //   // {
-          //   //   label: '网盘',
-          //   //   to: 'https://pan.kuizuo.cn',
-          //   // },
-          // ],
+          ],
         },
         {
           label: '导航',
@@ -227,14 +165,6 @@ const config = {
               label: 'GitHub',
               href: 'https://github.com/pansyhou',
             },
-            // {
-            //   label: '掘金',
-            //   href: 'https://juejin.cn/user/1565318510545901',
-            // },
-            // {
-            //   label: 'Discord',
-            //   href: 'https://discord.gg/M8cVcjDxkz',
-            // },
           ],
         },
         {
@@ -284,11 +214,6 @@ const config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 4,
     },
-    algolia: {
-      appId: 'GV6YN1ODMO',
-      apiKey: '50303937b0e4630bec4a20a14e3b7872',
-      indexName: 'kuizuo',
-    },
     zoom: {
       selector: '.markdown :not(em) > img',
       background: {
@@ -297,20 +222,20 @@ const config = {
       },
       config: {},
     },
-    matomo: {
-      matomoUrl: 'https://matomo.kuizuo.cn/',
-      siteId: '1',
-      phpLoader: 'matomo.php',
-      jsLoader: 'matomo.js',
-    },
-    giscus: {
-      repo: 'pansyhou/pansyhou.github.io',
-      repoId: 'R_kgDOJVSGCA',
-      category: 'General',
-      categoryId: 'DIC_kwDOJVSGCM4CWP09',
-      theme: 'light',
-      darkTheme: 'dark',
-    },
+    // matomo: {
+    //   matomoUrl: 'https://matomo.kuizuo.cn/',
+    //   siteId: '1',
+    //   phpLoader: 'matomo.php',
+    //   jsLoader: 'matomo.js',
+    // },
+    // giscus: {
+    //   repo: 'pansyhou/pansyhou.github.io',
+    //   repoId: 'R_kgDOJVSGCA',
+    //   category: 'General',
+    //   categoryId: 'DIC_kwDOJVSGCM4CWP09',
+    //   theme: 'light',
+    //   darkTheme: 'dark',
+    // },
     liveCodeBlock: {
       playgroundPosition: 'top',
     },
@@ -323,7 +248,7 @@ const config = {
       tagName: 'meta',
       attributes: {
         name: 'description',
-        content: 'pansyhou的个人博客',
+        content: 'pansyhou的个人博客，分享关于嵌入式开发(STM32, Zynq, Android)，算法刷题的笔记与心得。',
       },
     },
   ],
@@ -346,10 +271,10 @@ const config = {
           changefreq: 'daily',
           priority: 0.5,
         },
-        gtag: {
-          trackingID: 'G-S4SD5NXWXF',
-          anonymizeIP: true,
-        },
+        // gtag: {
+        //   trackingID: 'G-S4SD5NXWXF',
+        //   anonymizeIP: true,
+        // },
         // debug: true,
       }),
     ],
@@ -357,7 +282,7 @@ const config = {
   ],
   // themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
-    'docusaurus-plugin-matomo',
+    // 'docusaurus-plugin-matomo',
     'docusaurus-plugin-image-zoom',
     'docusaurus-plugin-sass',
     path.resolve(__dirname, './src/plugin/plugin-baidu-tongji'),
