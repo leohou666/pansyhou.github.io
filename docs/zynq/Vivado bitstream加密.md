@@ -15,13 +15,14 @@ keywords:
   - FPGA 安全
 ---
 
+对于高版本的 vivado，在中文论坛中的加密方式也许不再适用，xilinx 将这部分转移到了 bootgen 中
 
 ## vivado 中执行
 
 :::warning 前置条件
 需要安装 bootgen（在安装 vivado 时在 installer 中选择 bootgen）
  
-不知道会不会默认安装，可以在 tcl console 中输入 `bootgen -help` 看看有没有反应
+一般默认安装，可以在 tcl console 中输入 `bootgen -help` 看看有没有反应
 :::
 
 1. 编辑 `secure.bif` 文件到 vivado 工程目录下
@@ -64,6 +65,12 @@ the_ROM_image:
 ### efuse
 
 与上述同理
+
+生成 efuse 版本的 BOOT.BIN 后，连接 jtag，上图的最下面有一个 `Program eFUSE Registers`
+
+选择第一个的加密秘钥，下一步
+
+Controll 部分寄存器可以跳过
 
 ## 在 petalinux 中（未测试）
 

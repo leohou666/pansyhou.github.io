@@ -35,7 +35,7 @@ const config = {
         name: 'keywords',
         content: 'pansyhou',
       },
-   
+
     ],
     docs: {
       sidebar: {
@@ -63,7 +63,7 @@ const config = {
               label: '刷题',
               to: 'docs/oi/',
             },
-          
+
             {
               label: '标签',
               to: 'tags',
@@ -102,7 +102,7 @@ const config = {
             //   label: 'ESP32',
             //   to: 'docs/esp32/',
             // },
-            
+
             // {
             //   label: 'API服务',
             //   to: 'https://api.kuizuo.cn',
@@ -228,14 +228,14 @@ const config = {
     //   phpLoader: 'matomo.php',
     //   jsLoader: 'matomo.js',
     // },
-    // giscus: {
-    //   repo: 'pansyhou/pansyhou.github.io',
-    //   repoId: 'R_kgDOJVSGCA',
-    //   category: 'General',
-    //   categoryId: 'DIC_kwDOJVSGCM4CWP09',
-    //   theme: 'light',
-    //   darkTheme: 'dark',
-    // },
+    giscus: {
+      repo: 'pansyhou/pansyhou.github.io',
+      repoId: 'R_kgDOJVSGCA',
+      category: 'General',
+      categoryId: 'DIC_kwDOJVSGCM4CWP09',
+      theme: 'light',
+      darkTheme: 'dark',
+    },
     liveCodeBlock: {
       playgroundPosition: 'top',
     },
@@ -278,7 +278,7 @@ const config = {
         // debug: true,
       }),
     ],
-    
+
   ],
   // themes: ['@docusaurus/theme-live-codeblock'],
   plugins: [
@@ -346,10 +346,10 @@ const config = {
       },
     ],
   ],
-  
+
   i18n: {
     defaultLocale: 'zh-CN',
-    locales: [ 'zh-CN'],
+    locales: ['zh-CN'],
     localeConfigs: {
       en: {
         htmlLang: 'en-GB',
