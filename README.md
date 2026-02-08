@@ -40,14 +40,14 @@ fork from https://kuizuo.cn
 ```sh
 git clone https://github.com/pansy/blog.git
 cd blog
-yarn
-yarn start
+npm install
+npm run start
 ```
 
 Build
 
 ```sh
-yarn run build
+npm run build
 ```
 
 ## 📝License
